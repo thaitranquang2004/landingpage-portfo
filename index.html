@@ -1,754 +1,1093 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WATUWANT | Lens & Light Photography</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THAITHAI | Lens & Light Photography</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a87c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z'/%3E%3Ccircle cx='12' cy='13' r='4'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Cursor follower -->
     <div class="cursor-dot" id="cursorDot"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
-        <a href="#" class="nav-logo">WATUWANT</a>
-        <div class="nav-links">
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+      <a href="#hero" class="nav-logo">THAITHAI</a>
+      <div class="nav-links">
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
 
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#portfolio" class="mobile-link">Portfolio</a>
-        <a href="#about" class="mobile-link">About</a>
-        <a href="#contact" class="mobile-link">Contact</a>
-        <div class="mobile-social">
-            <a href="https://www.instagram.com/watuwant113" target="_blank" rel="noopener">Instagram</a>
-            <a href="mailto:thaitranquang2004@gmail.com">Email</a>
-        </div>
+      <a href="#portfolio" class="mobile-link">Portfolio</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <div class="mobile-social">
+        <a
+          href="https://www.instagram.com/watuwant113"
+          target="_blank"
+          rel="noopener"
+          >Instagram</a
+        >
+        <a href="mailto:thaitranquang2004@gmail.com">Email</a>
+      </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-slide active" style="background-image: url('images/622274405_4219992681594226_3747813249563824860_n.jpg')"></div>
-            <div class="hero-slide" style="background-image: url('images/640909683_4243642332562594_6976315066477080557_n.jpg')"></div>
-            <div class="hero-slide" style="background-image: url('images/528043752_4044062372520592_6770769343118644783_n.jpg')"></div>
-            <div class="hero-slide" style="background-image: url('images/637868324_4243644255895735_6636077160948005619_n.jpg')"></div>
+      <div class="hero-bg">
+        <div
+          class="hero-slide active"
+          style="
+            background-image: url(&quot;images/622274405_4219992681594226_3747813249563824860_n.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;images/640909683_4243642332562594_6976315066477080557_n.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;images/528043752_4044062372520592_6770769343118644783_n.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: url(&quot;images/637868324_4243644255895735_6636077160948005619_n.jpg&quot;);
+          "
+        ></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tagline" data-animate>Lens & Light</p>
+        <h1 class="hero-title" data-animate>
+          <span class="hero-line">Where the fleeting</span>
+          <span class="hero-line"><em>heartbeat</em> of time</span>
+          <span class="hero-line">is made <em>immortal</em></span>
+        </h1>
+        <div class="hero-cta" data-animate>
+          <a href="#portfolio" class="btn-explore">
+            <span>Explore Works</span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
         </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-tagline" data-animate>Lens & Light</p>
-            <h1 class="hero-title" data-animate>
-                <span class="hero-line">Where the fleeting</span>
-                <span class="hero-line"><em>heartbeat</em> of time</span>
-                <span class="hero-line">is made <em>immortal</em></span>
-            </h1>
-            <div class="hero-cta" data-animate>
-                <a href="#portfolio" class="btn-explore">
-                    <span>Explore Works</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-line"></div>
-            <span>Scroll</span>
-        </div>
-        <div class="hero-counter">
-            <span id="slideCounter">01</span> / <span>04</span>
-        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+      <div class="hero-counter">
+        <span id="slideCounter">01</span> / <span>04</span>
+      </div>
     </section>
 
     <!-- Featured Strip -->
     <section class="strip">
-        <div class="strip-track">
-            <span>Portrait</span>
-            <span class="strip-dot"></span>
-            <span>Couple</span>
-            <span class="strip-dot"></span>
-            <span>Cultural</span>
-            <span class="strip-dot"></span>
-            <span>Lifestyle</span>
-            <span class="strip-dot"></span>
-            <span>Cinematic</span>
-            <span class="strip-dot"></span>
-            <span>Portrait</span>
-            <span class="strip-dot"></span>
-            <span>Couple</span>
-            <span class="strip-dot"></span>
-            <span>Cultural</span>
-            <span class="strip-dot"></span>
-            <span>Lifestyle</span>
-            <span class="strip-dot"></span>
-            <span>Cinematic</span>
-            <span class="strip-dot"></span>
-        </div>
+      <div class="strip-track">
+        <span>Portrait</span>
+        <span class="strip-dot"></span>
+        <span>Couple</span>
+        <span class="strip-dot"></span>
+        <span>Cultural</span>
+        <span class="strip-dot"></span>
+        <span>Lifestyle</span>
+        <span class="strip-dot"></span>
+        <span>Cinematic</span>
+        <span class="strip-dot"></span>
+        <span>Portrait</span>
+        <span class="strip-dot"></span>
+        <span>Couple</span>
+        <span class="strip-dot"></span>
+        <span>Cultural</span>
+        <span class="strip-dot"></span>
+        <span>Lifestyle</span>
+        <span class="strip-dot"></span>
+        <span>Cinematic</span>
+        <span class="strip-dot"></span>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
-        <div class="section-header">
-            <span class="section-label" data-animate>Selected Works</span>
-            <h2 class="section-title" data-animate>Portfolio</h2>
+      <div class="section-header">
+        <span class="section-label" data-animate>Selected Works</span>
+        <h2 class="section-title" data-animate>Portfolio</h2>
+      </div>
+
+      <!-- Filter -->
+      <div class="filter-bar" data-animate>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="portrait">Portrait</button>
+        <button class="filter-btn" data-filter="couple">Couple</button>
+        <button class="filter-btn" data-filter="cultural">Cultural</button>
+        <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+      </div>
+
+      <!-- Masonry Gallery -->
+      <div class="gallery" id="gallery">
+        <!-- Row 1: Featured large -->
+        <div class="gallery-item large" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/622274405_4219992681594226_3747813249563824860_n.jpg"
+              alt="Couple photography in forest"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Forest Romance</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/637171804_4243642375895923_4195081852009284271_n.jpg"
+              alt="Traditional Vietnamese portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Temple Light</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/528043752_4044062372520592_6770769343118644783_n.jpg"
+              alt="Sunset portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Golden Hour</h3>
+          </div>
         </div>
 
-        <!-- Filter -->
-        <div class="filter-bar" data-animate>
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="portrait">Portrait</button>
-            <button class="filter-btn" data-filter="couple">Couple</button>
-            <button class="filter-btn" data-filter="cultural">Cultural</button>
-            <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+        <!-- Row 2 -->
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/501160301_3983883475205149_5263338934717396497_n.jpg"
+              alt="Vietnamese traditional couple"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Heritage Colors</h3>
+          </div>
+        </div>
+        <div class="gallery-item large" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/640909683_4243642332562594_6976315066477080557_n.jpg"
+              alt="Temple portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Sacred Grounds</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502419391_3984552035138293_3454633716972495856_n.jpg"
+              alt="Guitar lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Rock Spirit</h3>
+          </div>
         </div>
 
-        <!-- Masonry Gallery -->
-        <div class="gallery" id="gallery">
-            <!-- Row 1: Featured large -->
-            <div class="gallery-item large" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/622274405_4219992681594226_3747813249563824860_n.jpg" alt="Couple photography in forest" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Forest Romance</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/637171804_4243642375895923_4195081852009284271_n.jpg" alt="Traditional Vietnamese portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Temple Light</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/528043752_4044062372520592_6770769343118644783_n.jpg" alt="Sunset portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Golden Hour</h3>
-                </div>
-            </div>
-
-            <!-- Row 2 -->
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/501160301_3983883475205149_5263338934717396497_n.jpg" alt="Vietnamese traditional couple" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Heritage Colors</h3>
-                </div>
-            </div>
-            <div class="gallery-item large" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/640909683_4243642332562594_6976315066477080557_n.jpg" alt="Temple portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Sacred Grounds</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502419391_3984552035138293_3454633716972495856_n.jpg" alt="Guitar lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Rock Spirit</h3>
-                </div>
-            </div>
-
-            <!-- Row 3 -->
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/625361584_4221339111459583_4578644683764476566_n.jpg" alt="Spring portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Spring Bloom</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/637868324_4243644255895735_6636077160948005619_n.jpg" alt="Traditional dress portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Twilight Grace</h3>
-                </div>
-            </div>
-            <div class="gallery-item large" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/503368826_3983883368538493_3387296125960473118_n.jpg" alt="Group lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Sunset Stories</h3>
-                </div>
-            </div>
-
-            <!-- Row 4 -->
-            <div class="gallery-item" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/622356760_4219992728260888_4029747724928801261_n.jpg" alt="Couple photography" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Natural Bond</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/637727255_4243644305895730_5553656835425121207_n.jpg" alt="Cultural portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Evening Ritual</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502568361_3984369988489831_4180942524260793252_n.jpg" alt="Portrait session" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Quiet Moment</h3>
-                </div>
-            </div>
-
-            <!-- Row 5 -->
-            <div class="gallery-item large" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/623298180_4221339114792916_8308306114140491627_n.jpg" alt="Couple shoot" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Together</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502568715_3984552301804933_6738221114929411521_n.jpg" alt="Lifestyle photography" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Urban Edge</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/637863978_4243644462562381_7678273803711592024_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Ethereal</h3>
-                </div>
-            </div>
-
-            <!-- Row 6 -->
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/640583354_4243642369229257_4642973202981333965_n.jpg" alt="Cultural photography" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Heritage</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/637873521_4243644415895719_7398948099829508878_n.jpg" alt="Portrait photography" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Serene</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/622578508_4219992758260885_7799167322309848120_n.jpg" alt="Couple portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Whispering Pines</h3>
-                </div>
-            </div>
-
-            <!-- Row 7 -->
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502584205_3984552038471626_1432858909578819099_n.jpg" alt="Lifestyle shoot" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Raw Energy</h3>
-                </div>
-            </div>
-            <div class="gallery-item large" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/637881826_4243644645895696_8473618525466713280_n.jpg" alt="Cultural heritage" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Tradition Lives</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502463595_3984369948489835_1659016152902841714_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Soft Light</h3>
-                </div>
-            </div>
-
-            <!-- Row 8 -->
-            <div class="gallery-item" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/501279152_3983883445205152_7888250331879695514_n.jpg" alt="Couple traditional" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Red Thread</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/624961404_4221339108126250_1192471543748014356_n.jpg" alt="Portrait in áo dài" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Blossom</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502850282_3984552328471597_8704108968432218714_n.jpg" alt="Lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Street Vibes</h3>
-                </div>
-            </div>
-
-            <!-- Row 9 -->
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/638506685_4243642392562588_4333883057693420629_n.jpg" alt="Cultural" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Incense Glow</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/503071848_3984369695156527_7226796397136690523_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Warm Gaze</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/623365684_4219992824927545_5555360962506280915_n.jpg" alt="Couple" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Gentle Walk</h3>
-                </div>
-            </div>
-
-            <!-- Row 10 -->
-            <div class="gallery-item large" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/528210846_4044062392520590_466654151677756861_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Ocean Breeze</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/640337142_4243644172562410_1321132947014488090_n.jpg" alt="Cultural" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Lantern Light</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502578355_3984370018489828_7207233071571586231_n.jpg" alt="Lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Bold Statement</h3>
-                </div>
-            </div>
-
-            <!-- Row 11 -->
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/503277435_3984369771823186_2979898507330781547_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Riverside</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/638842680_4243644379229056_3857715814344885974_n.jpg" alt="Cultural" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Sacred Steps</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/623373941_4219992821594212_6322194568844048901_n.jpg" alt="Couple" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Dappled Light</h3>
-                </div>
-            </div>
-
-            <!-- Row 12 -->
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502607945_3984552121804951_9092155408842920916_n.jpg" alt="Lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>After Dark</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/637863985_4243644419229052_3591593412037011743_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Dream State</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/640114263_4243644445895716_4166460273683865545_n.jpg" alt="Cultural" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Pagoda Dawn</h3>
-                </div>
-            </div>
-
-            <!-- Row 13 -->
-            <div class="gallery-item" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/501545723_3983883968538433_2107027604993112460_n.jpg" alt="Couple" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Spring Love</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502447075_3984369911823172_3454972664552734454_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Inner World</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/503495360_3984552268471603_2751390627471860622_n.jpg" alt="Lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Midnight Tone</h3>
-                </div>
-            </div>
-
-            <!-- Row 14 -->
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/637468479_4243644259229068_2872099200166130152_n.jpg" alt="Cultural" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Dragon Gate</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/625190534_4221339104792917_390278057774827531_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Cherry Blossom</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502584810_3984370011823162_6694374766099042531_n.jpg" alt="Lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Edge</h3>
-                </div>
-            </div>
-
-            <!-- Row 15: remaining -->
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502433689_3984370015156495_7587067294014946769_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Still Frame</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/501799235_3983883481871815_452608675543241780_n.jpg" alt="Couple" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>New Year Joy</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/640287618_4243644332562394_8995557918492419548_n.jpg" alt="Cultural" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Timeless</h3>
-                </div>
-            </div>
-
-            <!-- Row 16 -->
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502636155_3984369681823195_6913586234342785074_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Dusk</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/503070987_3983883378538492_7997639723080591820_n.jpg" alt="Cultural" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Ao Dai</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502988592_3984556295137867_5885297136319215917_n.jpg" alt="Lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Night Session</h3>
-                </div>
-            </div>
-
-            <!-- Row 17 -->
-            <div class="gallery-item" data-category="cultural" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502491919_3984556135137883_3946265818204862743_n.jpg" alt="Cultural" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Cultural</span>
-                    <h3>Golden Temple</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/503209269_3983883395205157_743362869518109380_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Morning Light</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="lifestyle" data-animate>
-                <div class="gallery-img">
-                    <img src="images/502568875_3984556228471207_3209929429351134844_n.jpg" alt="Lifestyle" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Lifestyle</span>
-                    <h3>Free Spirit</h3>
-                </div>
-            </div>
-
-            <!-- Final row -->
-            <div class="gallery-item" data-category="portrait" data-animate>
-                <div class="gallery-img">
-                    <img src="images/503309900_3983883511871812_5788791432987513056_n.jpg" alt="Portrait" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Portrait</span>
-                    <h3>Celebration</h3>
-                </div>
-            </div>
-            <div class="gallery-item" data-category="couple" data-animate>
-                <div class="gallery-img">
-                    <img src="images/500223105_17914063797104348_8089035068535490505_n.jfif" alt="Couple" loading="lazy">
-                </div>
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">Couple</span>
-                    <h3>Timeless Love</h3>
-                </div>
-            </div>
+        <!-- Row 3 -->
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/625361584_4221339111459583_4578644683764476566_n.jpg"
+              alt="Spring portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Spring Bloom</h3>
+          </div>
         </div>
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/637868324_4243644255895735_6636077160948005619_n.jpg"
+              alt="Traditional dress portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Twilight Grace</h3>
+          </div>
+        </div>
+        <div class="gallery-item large" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/503368826_3983883368538493_3387296125960473118_n.jpg"
+              alt="Group lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Sunset Stories</h3>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="gallery-item" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/622356760_4219992728260888_4029747724928801261_n.jpg"
+              alt="Couple photography"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Natural Bond</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/637727255_4243644305895730_5553656835425121207_n.jpg"
+              alt="Cultural portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Evening Ritual</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502568361_3984369988489831_4180942524260793252_n.jpg"
+              alt="Portrait session"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Quiet Moment</h3>
+          </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="gallery-item large" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/623298180_4221339114792916_8308306114140491627_n.jpg"
+              alt="Couple shoot"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Together</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502568715_3984552301804933_6738221114929411521_n.jpg"
+              alt="Lifestyle photography"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Urban Edge</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/637863978_4243644462562381_7678273803711592024_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Ethereal</h3>
+          </div>
+        </div>
+
+        <!-- Row 6 -->
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/640583354_4243642369229257_4642973202981333965_n.jpg"
+              alt="Cultural photography"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Heritage</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/637873521_4243644415895719_7398948099829508878_n.jpg"
+              alt="Portrait photography"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Serene</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/622578508_4219992758260885_7799167322309848120_n.jpg"
+              alt="Couple portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Whispering Pines</h3>
+          </div>
+        </div>
+
+        <!-- Row 7 -->
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502584205_3984552038471626_1432858909578819099_n.jpg"
+              alt="Lifestyle shoot"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Raw Energy</h3>
+          </div>
+        </div>
+        <div class="gallery-item large" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/637881826_4243644645895696_8473618525466713280_n.jpg"
+              alt="Cultural heritage"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Tradition Lives</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502463595_3984369948489835_1659016152902841714_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Soft Light</h3>
+          </div>
+        </div>
+
+        <!-- Row 8 -->
+        <div class="gallery-item" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/501279152_3983883445205152_7888250331879695514_n.jpg"
+              alt="Couple traditional"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Red Thread</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/624961404_4221339108126250_1192471543748014356_n.jpg"
+              alt="Portrait in áo dài"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Blossom</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502850282_3984552328471597_8704108968432218714_n.jpg"
+              alt="Lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Street Vibes</h3>
+          </div>
+        </div>
+
+        <!-- Row 9 -->
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/638506685_4243642392562588_4333883057693420629_n.jpg"
+              alt="Cultural"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Incense Glow</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/503071848_3984369695156527_7226796397136690523_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Warm Gaze</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/623365684_4219992824927545_5555360962506280915_n.jpg"
+              alt="Couple"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Gentle Walk</h3>
+          </div>
+        </div>
+
+        <!-- Row 10 -->
+        <div class="gallery-item large" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/528210846_4044062392520590_466654151677756861_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Ocean Breeze</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/640337142_4243644172562410_1321132947014488090_n.jpg"
+              alt="Cultural"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Lantern Light</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502578355_3984370018489828_7207233071571586231_n.jpg"
+              alt="Lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Bold Statement</h3>
+          </div>
+        </div>
+
+        <!-- Row 11 -->
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/503277435_3984369771823186_2979898507330781547_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Riverside</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/638842680_4243644379229056_3857715814344885974_n.jpg"
+              alt="Cultural"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Sacred Steps</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/623373941_4219992821594212_6322194568844048901_n.jpg"
+              alt="Couple"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Dappled Light</h3>
+          </div>
+        </div>
+
+        <!-- Row 12 -->
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502607945_3984552121804951_9092155408842920916_n.jpg"
+              alt="Lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>After Dark</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/637863985_4243644419229052_3591593412037011743_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Dream State</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/640114263_4243644445895716_4166460273683865545_n.jpg"
+              alt="Cultural"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Pagoda Dawn</h3>
+          </div>
+        </div>
+
+        <!-- Row 13 -->
+        <div class="gallery-item" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/501545723_3983883968538433_2107027604993112460_n.jpg"
+              alt="Couple"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Spring Love</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502447075_3984369911823172_3454972664552734454_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Inner World</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/503495360_3984552268471603_2751390627471860622_n.jpg"
+              alt="Lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Midnight Tone</h3>
+          </div>
+        </div>
+
+        <!-- Row 14 -->
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/637468479_4243644259229068_2872099200166130152_n.jpg"
+              alt="Cultural"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Dragon Gate</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/625190534_4221339104792917_390278057774827531_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Cherry Blossom</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502584810_3984370011823162_6694374766099042531_n.jpg"
+              alt="Lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Edge</h3>
+          </div>
+        </div>
+
+        <!-- Row 15: remaining -->
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502433689_3984370015156495_7587067294014946769_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Still Frame</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/501799235_3983883481871815_452608675543241780_n.jpg"
+              alt="Couple"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>New Year Joy</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/640287618_4243644332562394_8995557918492419548_n.jpg"
+              alt="Cultural"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Timeless</h3>
+          </div>
+        </div>
+
+        <!-- Row 16 -->
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502636155_3984369681823195_6913586234342785074_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Dusk</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/503070987_3983883378538492_7997639723080591820_n.jpg"
+              alt="Cultural"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Ao Dai</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502988592_3984556295137867_5885297136319215917_n.jpg"
+              alt="Lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Night Session</h3>
+          </div>
+        </div>
+
+        <!-- Row 17 -->
+        <div class="gallery-item" data-category="cultural" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502491919_3984556135137883_3946265818204862743_n.jpg"
+              alt="Cultural"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Cultural</span>
+            <h3>Golden Temple</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/503209269_3983883395205157_743362869518109380_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Morning Light</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="lifestyle" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/502568875_3984556228471207_3209929429351134844_n.jpg"
+              alt="Lifestyle"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Lifestyle</span>
+            <h3>Free Spirit</h3>
+          </div>
+        </div>
+
+        <!-- Final row -->
+        <div class="gallery-item" data-category="portrait" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/503309900_3983883511871812_5788791432987513056_n.jpg"
+              alt="Portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Portrait</span>
+            <h3>Celebration</h3>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="couple" data-animate>
+          <div class="gallery-img">
+            <img
+              src="images/500223105_17914063797104348_8089035068535490505_n.jfif"
+              alt="Couple"
+              loading="lazy"
+            />
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Couple</span>
+            <h3>Timeless Love</h3>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Parallax Quote -->
     <section class="quote-section">
-        <div class="quote-bg" style="background-image: url('images/637881826_4243644645895696_8473618525466713280_n.jpg')"></div>
-        <div class="quote-overlay"></div>
-        <div class="quote-content" data-animate>
-            <blockquote>
-                <p>"Every photograph is a story<br>waiting to be felt."</p>
-            </blockquote>
-        </div>
+      <div
+        class="quote-bg"
+        style="
+          background-image: url(&quot;images/637881826_4243644645895696_8473618525466713280_n.jpg&quot;);
+        "
+      ></div>
+      <div class="quote-overlay"></div>
+      <div class="quote-content" data-animate>
+        <blockquote>
+          <p>"Every photograph is a story<br />waiting to be felt."</p>
+        </blockquote>
+      </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="about-grid">
-            <div class="about-image" data-animate>
-                <img src="images/528043752_4044062372520592_6770769343118644783_n.jpg" alt="Photographer portrait">
-                <div class="about-image-accent"></div>
-            </div>
-            <div class="about-text">
-                <span class="section-label" data-animate>About Me</span>
-                <h2 class="about-title" data-animate>The Eye Behind<br>the Lens</h2>
-                <p class="about-desc" data-animate>
-                    I'm a Vietnamese photographer who believes every moment carries an emotion worth preserving.
-                    My lens is drawn to the interplay of light and shadow, the quiet intimacy of couples,
-                    the rich tapestry of Vietnamese culture, and the raw beauty of everyday life.
-                </p>
-                <p class="about-desc" data-animate>
-                    From cinematic portraits bathed in golden hour to traditional cultural sessions at ancient temples,
-                    I craft visual stories that transcend time. Each frame is a collaboration between the fleeting moment
-                    and the eternal image.
-                </p>
-                <div class="about-stats" data-animate>
-                    <div class="stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Sessions</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">4</span>
-                        <span class="stat-label">Styles</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Passion</span>
-                    </div>
-                </div>
-            </div>
+      <div class="about-grid">
+        <div class="about-image" data-animate>
+          <img src="images/about/thaithai.jpg" alt="Photographer portrait" />
+          <div class="about-image-accent"></div>
         </div>
+        <div class="about-text">
+          <span class="section-label" data-animate>About Me</span>
+          <h2 class="about-title" data-animate>The Eye Behind<br />the Lens</h2>
+          <p class="about-desc" data-animate>
+            I'm a Vietnamese photographer who believes every moment carries an
+            emotion worth preserving. My lens is drawn to the interplay of light
+            and shadow, the quiet intimacy of couples, the rich tapestry of
+            Vietnamese culture, and the raw beauty of everyday life.
+          </p>
+          <p class="about-desc" data-animate>
+            From cinematic portraits bathed in golden hour to traditional
+            cultural sessions at ancient temples, I craft visual stories that
+            transcend time. Each frame is a collaboration between the fleeting
+            moment and the eternal image.
+          </p>
+          <div class="about-stats" data-animate>
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Sessions</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Styles</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Passion</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="contact-inner">
-            <span class="section-label" data-animate>Get in Touch</span>
-            <h2 class="contact-title" data-animate>Let's Create<br><em>Together</em></h2>
-            <p class="contact-desc" data-animate>
-                Ready to capture your story? Whether it's a couple session, portrait, cultural shoot,
-                or something entirely unique — I'd love to hear from you.
-            </p>
-            <a href="mailto:thaitranquang2004@gmail.com" class="contact-email" data-animate>thaitranquang2004@gmail.com</a>
-            <div class="contact-socials" data-animate>
-                <a href="https://www.instagram.com/watuwant113" target="_blank" rel="noopener" class="social-link">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                    </svg>
-                    <span>Instagram</span>
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                    </svg>
-                    <span>Facebook</span>
-                </a>
-                <a href="mailto:thaitranquang2004@gmail.com" class="social-link">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                    <span>Email</span>
-                </a>
-            </div>
+      <div class="contact-inner">
+        <span class="section-label" data-animate>Get in Touch</span>
+        <h2 class="contact-title" data-animate>
+          Let's Create<br /><em>Together</em>
+        </h2>
+        <p class="contact-desc" data-animate>
+          Ready to capture your story? Whether it's a couple session, portrait,
+          cultural shoot, or something entirely unique — I'd love to hear from
+          you.
+        </p>
+        <a
+          href="mailto:thaitranquang2004@gmail.com"
+          class="contact-email"
+          data-animate
+          >thaitranquang2004@gmail.com</a
+        >
+        <div class="contact-socials" data-animate>
+          <a
+            href="https://www.instagram.com/watuwant113"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+            <span>Facebook</span>
+          </a>
+          <a href="mailto:thaitranquang2004@gmail.com" class="social-link">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>Email</span>
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-inner">
-            <span class="footer-logo">WATUWANT</span>
-            <p class="footer-copy">&copy; 2024 WATUWANT Photography. All rights reserved.</p>
-            <p class="footer-quote">"Lens and light: where the fleeting heartbeat of time is made immortal."</p>
-        </div>
+      <div class="footer-inner">
+        <span class="footer-logo">THAITHAI</span>
+        <p class="footer-copy">
+          &copy; 2024 THAITHAI Photography. All rights reserved.
+        </p>
+        <p class="footer-quote">
+          "Lens and light: where the fleeting heartbeat of time is made
+          immortal."
+        </p>
+      </div>
     </footer>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Close">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-        </button>
-        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="15 18 9 12 15 6"/>
-            </svg>
-        </button>
-        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <polyline points="9 18 15 12 9 6"/>
-            </svg>
-        </button>
-        <div class="lightbox-content">
-            <img id="lightboxImg" src="" alt="">
-        </div>
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <button
+        class="lightbox-nav lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button
+        class="lightbox-nav lightbox-next"
+        id="lightboxNext"
+        aria-label="Next"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+      <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="" />
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
