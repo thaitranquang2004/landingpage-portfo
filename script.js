@@ -94,27 +94,61 @@ document.querySelectorAll('[data-animate]:not(.hero-content [data-animate])').fo
 
 // ========== GALLERY FILTER ==========
 const filterBtns = document.querySelectorAll('.filter-btn');
-const galleryItems = document.querySelectorAll('.gallery-item');
+const galleryItems = [...document.querySelectorAll('.gallery-item')];
+const portfolioRevealBtn = document.getElementById('portfolioRevealBtn');
+const initialVisibleGalleryCount = 9;
+let activeGalleryFilter = 'all';
+let isGalleryExpanded = false;
+
+function updateGalleryVisibility() {
+    let visibleCount = 0;
+    let hasHiddenMatches = false;
+
+    galleryItems.forEach((item) => {
+        const matchesFilter =
+            activeGalleryFilter === 'all' || item.dataset.category === activeGalleryFilter;
+        const shouldShow =
+            matchesFilter && (isGalleryExpanded || visibleCount < initialVisibleGalleryCount);
+
+        if (matchesFilter && !isGalleryExpanded && visibleCount >= initialVisibleGalleryCount) {
+            hasHiddenMatches = true;
+        }
+
+        if (shouldShow) {
+            item.classList.remove('hidden');
+            item.style.animation = `fadeInUp 0.5s ${visibleCount * 0.03}s both`;
+            visibleCount += 1;
+            return;
+        }
+
+        item.classList.add('hidden');
+        item.style.animation = '';
+    });
+
+    if (!portfolioRevealBtn) return;
+
+    portfolioRevealBtn.classList.toggle('hidden', isGalleryExpanded || !hasHiddenMatches);
+    portfolioRevealBtn.setAttribute('aria-expanded', String(isGalleryExpanded));
+}
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        const filter = btn.dataset.filter;
-
-        galleryItems.forEach((item, i) => {
-            const show = filter === 'all' || item.dataset.category === filter;
-            if (show) {
-                item.classList.remove('hidden');
-                item.style.animation = `fadeInUp 0.5s ${i * 0.03}s both`;
-            } else {
-                item.classList.add('hidden');
-                item.style.animation = '';
-            }
-        });
+        activeGalleryFilter = btn.dataset.filter;
+        updateGalleryVisibility();
     });
 });
+
+if (portfolioRevealBtn) {
+    portfolioRevealBtn.addEventListener('click', () => {
+        isGalleryExpanded = true;
+        updateGalleryVisibility();
+    });
+}
+
+updateGalleryVisibility();
 
 // ========== LIGHTBOX ==========
 const lightbox = document.getElementById('lightbox');
